@@ -1,0 +1,1 @@
+const menu=(e,t,c=".burger")=>{const o=document.querySelector(e),s=document.querySelector(t),l=document.querySelector(c);s.style.top=o.offsetHeight+"px",l.addEventListener("click",(e=>{s.classList.toggle("active"),l.classList.toggle("active"),document.body.classList.toggle("lock")}))};export{menu};
