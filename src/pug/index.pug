@@ -10,17 +10,37 @@ html(lang="ru")
 		title Document
 		link(rel='icon' href='./favicon.ico' type='image/x-icon')
 		link(rel="stylesheet" type="text/css" href="static/css/styles.css")
+
 	body
 
 		.container
 			
 			main.content
+				.content__body
+					.video
+						a.video__link(href="https://youtu.be/UO6TXo3-Iog" target="_blank") 
+							picture
+								source(srcset="https://i.ytimg.com/vi_webp/UO6TXo3-Iog/maxresdefault.webp" type="image/webp")
+								img.video__media(src="https://i.ytimg.com/vi/UO6TXo3-Iog/maxresdefault.jpg", alt="")
+						button.video__button(aria-label='Запустить видео')
+							<svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
 
-				ul#first
-				ul#secon
-
-				button#button Click me
 			footer.footer
+				.wrapper
+					.footer__body
+						.footer__slider.swiper-container
+							.swiper-wrapper
+								.footer__slide.swiper-slide
+									.footer__slide_bg 1
+								.footer__slide.swiper-slide
+									.footer__slide_bg 1
+								.footer__slide.swiper-slide
+									.footer__slide_bg 1
+								.footer__slide.swiper-slide
+									.footer__slide_bg 1
 		
-		script(src="static/js/test.js")
+		script(src="static/js/test.js" type='module')
+		script(src="static/js/slider.js" type='module' defer)
+		link(rel="stylesheet" type="text/css" href="static/css/swiper.css" media="print" onload="this.media='all'")
+
 		//- link(rel="stylesheet" type="text/css" href="" media="print" onload="this.media='all'")

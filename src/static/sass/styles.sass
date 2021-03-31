@@ -6,3 +6,65 @@
 @import 'core/_vars'
 
 @import 'project/_elements'
+
+
+.content
+	&__body
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-gap: 20px
+
+.video
+	position: relative
+	width: 100%
+	height: 0
+	padding-bottom: 56.25%
+	background-color: #000
+	&:hover
+		.video__button-shape
+			fill: #ff0000
+			fill-opacity: 1
+
+	&__media
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border: none
+	&__button
+		position: absolute
+		padding: 0
+		top: 50%
+		left: 50%
+		width: 68px
+		height: 48px
+		border: none
+		background-color: transparent
+		+center
+		outline: none
+		display: none
+		&:focus
+			.video__button-shape
+				fill: #ff0000
+				fill-opacity: 1
+
+		&-shape
+			fill: #212121
+			fill-opacity: .8
+			
+		&-icon
+			fill: #fff
+		svg
+			cursor: pointer
+			
+	&--enabled
+		cursor: pointer
+		.video__button
+			display: block 
+
+
+.footer
+	&__slide
+		min-height: 250px
+		background-color: pink
